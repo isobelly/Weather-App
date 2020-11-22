@@ -1,7 +1,15 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
 
-  let days = ["Sunday", "Saturday"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[date.getDay()];
   return `${day} ${formatHours(timestamp)}`;
 }
@@ -86,6 +94,8 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 search("New York");
